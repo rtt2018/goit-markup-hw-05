@@ -489,29 +489,35 @@ img {
 /* #endregion  */
 
 /* #region Subscribe */
+
 .subscribe-container {
   margin-left: auto;
 }
-.subscribe-field-label {
+
+.subscribe-caption {
   display: block;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 16px;
 }
-.input-wrapper {
+
+.subscribe-field-label {
+}
+
+.subscribe-form {
   display: flex;
   gap: 24px;
 }
+
 .input-mail-field {
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #2e2f42;
   padding: 8px 16px;
   font-weight: 400;
@@ -519,6 +525,11 @@ img {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
+  transition: box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-mail-field:focus {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .input-mail-field::placeholder {
@@ -536,13 +547,19 @@ img {
   border: 0;
   border-radius: 4px;
   padding: 8px 24px;
-
   gap: 16px;
 }
 
 .button-caption {
   text-align: center;
 }
+
 .send-icon {
+  fill: #fff;
 }
-/* #endregion  */
+
+/* #endregion */
+
+/* #region Modal */
+
+/* #endregion */
