@@ -522,7 +522,8 @@ img {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow, border-color;
 }
 
 .input-mail-field:focus {
@@ -592,8 +593,9 @@ img {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
-  padding: 24px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
 }
 
 .backdrop:not(.is-open) .modal-window {
@@ -654,7 +656,7 @@ img {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -668,16 +670,19 @@ img {
 }
 
 .form-field {
+  font-family: "Roboto", sans-serif;
+
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
-  color: #8e8f99;
+  color: inherit;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
   height: 40px;
   padding: 8px 38px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field:focus-visible {
@@ -695,6 +700,7 @@ img {
   left: 16px;
   transform: translateY(-50%);
   pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment-field {
@@ -704,10 +710,20 @@ img {
   resize: none;
   outline: transparent;
   padding: 8px 16px;
-
+  color: inherit;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-field::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
@@ -717,26 +733,14 @@ img {
   outline: transparent;
 }
 
-.check-icon {
-  fill: #2e2f42;
-}
-
-.accept-checkbox:checked
-  .privacy-policy-checkbox-label
-  .privacy-policy-question {
-  background-color: #404bbf;
-  border: 1px solid #404bbf;
-}
-
-.accept-checkbox:checked
-  .privacy-policy-checkbox-label
-  .privacy-policy-question
-  .check-icon {
-  fill: #f4f4fd;
-}
-
 .privacy-policy-checkbox-label {
   cursor: pointer;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 
 .privacy-policy-question {
@@ -748,10 +752,35 @@ img {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   cursor: pointer;
+  background-color: #fcfcfc;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-policy-question .check-icon {
+  fill: #f4f4fd;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type="checkbox"]:checked
+  + .privacy-policy-checkbox-label
+  .privacy-policy-question {
+  background-color: #404bbf;
+  border-color: #404bbf;
+}
+
+input[type="checkbox"]:checked
+  + .privacy-policy-checkbox-label
+  .privacy-policy-question
+  .check-icon {
+  fill: #f4f4fd;
 }
 
 .privacy-policy-link {
   text-decoration: underline;
+  line-height: 1.33;
+  color: #4d5ae5;
+  text-decoration-skip-ink: none;
 }
 
 .send-button-geometry {
@@ -763,5 +792,6 @@ img {
 
   border: none;
   text-align: center;
+  margin-top: 16px;
 }
 /* #endregion */
