@@ -595,7 +595,7 @@
               />
             </label>
             <button type="submit" class="order-button subscribe-button">
-              <span class="button-caption">Subscribe</span>
+              Subscribe
               <svg class="send-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
@@ -657,31 +657,27 @@
               </svg>
             </div>
           </div>
-          <div class="comment-item-wrapper">
-            <label for="comment-text-field" class="field-label">Comment</label>
-            <div class="field-wrapper">
-              <textarea
-                name="comment-text-field"
-                id="comment-text-field"
-                class="comment-field"
-                rows="7"
-                placeholder="Text input"
-              ></textarea>
-            </div>
+          <div class="field-wrapper">
+            <label for="user-comment" class="field-label">Comment</label>
+            <textarea
+              name="user-comment"
+              id="user-comment"
+              class="comment-field"
+              rows="7"
+              placeholder="Text input"
+            ></textarea>
           </div>
           <div class="modal-form-agrement">
             <input
               class="accept-checkbox visually-hidden"
               type="checkbox"
-              name="privacy-policy-checkbox"
-              id="privacy-policy-checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
             />
-            <label
-              for="privacy-policy-checkbox"
-              class="privacy-policy-checkbox-label"
-            >
+            <label for="user-privacy" class="privacy-policy-checkbox-label">
               <span class="privacy-policy-question">
-                <svg class="check-icon" width="10" height="7">
+                <svg class="check-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check2"></use>
                 </svg>
               </span>
@@ -695,6 +691,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/script.js"></script>
   </body>
-  <script src="./js/script.js"></script>
 </html>

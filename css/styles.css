@@ -515,7 +515,7 @@ img {
   border-radius: 4px;
   width: 264px;
   height: 40px;
-  background-color: #2e2f42;
+  background-color: transparent;
   padding: 8px 16px;
   font-weight: 400;
   font-size: 12px;
@@ -524,6 +524,7 @@ img {
   color: #fff;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: box-shadow, border-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .input-mail-field:focus {
@@ -548,9 +549,7 @@ img {
   border-radius: 4px;
   padding: 8px 24px;
   gap: 16px;
-}
-
-.button-caption {
+  min-width: 165px;
   text-align: center;
 }
 
@@ -586,7 +585,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%) scale(1);
+  transform: translateX(-50%) translateY(-50%);
   border-radius: 4px;
   width: 408px;
   min-height: 584px;
@@ -616,20 +615,16 @@ img {
   top: 24px;
   right: 24px;
   display: flex;
-
   width: 24px;
   height: 24px;
   border-radius: 50%;
-
-  border-width: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
-  border-color: rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
   align-items: center;
   justify-content: center;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: border-color, background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-button:hover,
@@ -645,7 +640,7 @@ img {
 
 .close-icon {
   fill: #2e2f42;
-  transition: fill 250ms;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-caption {
@@ -694,6 +689,8 @@ img {
   height: 40px;
   padding: 8px 38px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
 }
 
 .form-field:focus-visible {
@@ -770,11 +767,13 @@ img {
   cursor: pointer;
   background-color: #fcfcfc;
   margin-right: 8px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
 .privacy-policy-question .check-icon {
-  fill: #f4f4fd;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
