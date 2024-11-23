@@ -548,13 +548,14 @@ img {
   border: 0;
   border-radius: 4px;
   padding: 8px 24px;
-  gap: 16px;
+
   min-width: 165px;
   text-align: center;
 }
 
 .send-icon {
   fill: #fff;
+  margin-left: 16px;
 }
 
 /* #endregion */
@@ -594,9 +595,7 @@ img {
   background: #fcfcfc;
   padding: 72px 24px 24px;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opasity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop:not(.is-open) .modal-window {
@@ -672,7 +671,7 @@ img {
   margin-bottom: 8px;
 }
 
-.comment-item-wrapper {
+.comment-wrapper {
   margin-bottom: 16px;
 }
 
@@ -718,8 +717,9 @@ img {
   border-radius: 4px;
   resize: none;
   outline: transparent;
+  background-color: transparent;
   padding: 8px 16px;
-  color: inherit;
+  color: rgba(46, 47, 66, 0.4);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -743,7 +743,7 @@ img {
 }
 
 .modal-form-agrement {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .privacy-policy-checkbox-label {
